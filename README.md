@@ -1,4 +1,4 @@
-# alquran
+# AL-QUR'AN DIGITAL AI
 ------------------------------------
 Pencarian ayat Al-Qur'an: https://falakmu.id/alquran/
 ------------------------------------
