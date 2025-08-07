@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        caption {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+    <title>Daftar Surah</title>
+</head>
+<body>
+
+<table id="surahTable">
+    <caption>DAFTAR SURAH</caption>
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">No.</th>
+            <th onclick="sortTable(1)">Nama Surah</th>
+            <th onclick="sortTable(2)">Hal</th>
+            <th onclick="sortTable(3)">Juz</th>
+            <th onclick="sortTable(4)">Jumlah Ayat</th>
+            <th onclick="sortTable(5)">No.</th>
+            <th onclick="sortTable(6)">Nama Surah</th>
+            <th onclick="sortTable(7)">Hal</th>
+            <th onclick="sortTable(8)">Juz</th>
+            <th onclick="sortTable(9)">Jumlah Ayat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>Al-Fatihah</td><td>1</td><td>1</td><td>7</td><td>58</td><td>Al-Mujadilah</td><td>545</td><td>28</td><td>22</td></tr>
+        <tr><td>2</td><td>Al-Baqarah</td><td>2</td><td>1</td><td>286</td><td>59</td><td>Al-Hasyr</td><td>549</td><td>28</td><td>24</td></tr>
+        <tr><td>3</td><td>Ali 'Imran</td><td>50</td><td>3</td><td>200</td><td>60</td><td>Al-Mumtahanah</td><td>552</td><td>28</td><td>13</td></tr>
+        <tr><td>4</td><td>An-Nisa'</td><td>77</td><td>4</td><td>176</td><td>61</td><td>As-Saff</td><td>554</td><td>28</td><td>14</td></tr>
+        <tr><td>5</td><td>Al-Ma'idah</td><td>106</td><td>6</td><td>120</td><td>62</td><td>Al-Jumu'ah</td><td>556</td><td>28</td><td>11</td></tr>
+        <tr><td>6</td><td>Al-An'am</td><td>128</td><td>7</td><td>165</td><td>63</td><td>Al-Munafiqun</td><td>558</td><td>28</td><td>11</td></tr>
+        <tr><td>7</td><td>Al-A'raf</td><td>151</td><td>8</td><td>206</td><td>64</td><td>At-Tagabun</td><td>560</td><td>28</td><td>18</td></tr>
+        <tr><td>8</td><td>Al-Anfal</td><td>177</td><td>9</td><td>75</td><td>65</td><td>At-Talaq</td><td>562</td><td>28</td><td>12</td></tr>
+        <tr><td>9</td><td>At-Taubah</td><td>187</td><td>10</td><td>129</td><td>66</td><td>At-Tahrim</td><td>564</td><td>28</td><td>12</td></tr>
+        <tr><td>10</td><td>Yunus</td><td>208</td><td>11</td><td>109</td><td>67</td><td>Al-Mulk</td><td>566</td><td>29</td><td>30</td></tr>
+        <tr><td>11</td><td>Hud</td><td>221</td><td>11</td><td>123</td><td>68</td><td>Al-Qalam</td><td>568</td><td>29</td><td>52</td></tr>
+        <tr><td>12</td><td>Yusuf</td><td>235</td><td>12</td><td>111</td><td>69</td><td>Al-Haqqah</td><td>570</td><td>29</td><td>52</td></tr>
+        <tr><td>13</td><td>Ar-Ra'd</td><td>249</td><td>13</td><td>43</td><td>70</td><td>Nuh</td><td>574</td><td>29</td><td>28</td></tr>
+        <tr><td>14</td><td>Ibrahim</td><td>255</td><td>13</td><td>52</td><td>71</td><td>Al-Ma'arij</td><td>572</td><td>29</td><td>44</td></tr>
+        <tr><td>15</td><td>Al-Hijr</td><td>262</td><td>14</td><td>99</td><td>72</td><td>Al-Jinn</td><td>572</td><td>29</td><td>28</td></tr>
+        <tr><td>16</td><td>An-Nahl</td><td>267</td><td>14</td><td>128</td><td>73</td><td>Al-Muzzammil</td><td>574</td><td>29</td><td>20</td></tr>
+        <tr><td>17</td><td>Al-Isra'</td><td>282</td><td>15</td><td>111</td><td>74</td><td>Al-Muddassir</td><td>575</td><td>29</td><td>56</td></tr>
+        <tr><td>18</td><td>Al-Kahf</td><td>293</td><td>15</td><td>110</td><td>75</td><td>Al-Qiyamah</td><td>577</td><td>29</td><td>40</td></tr>
+        <tr><td>19</td><td>Maryam</td><td>305</td><td>16</td><td>98</td><td>76</td><td>Al-Insan</td><td>578</td><td>29</td><td>31</td></tr>
+        <tr><td>20</td><td>Ta Ha</td><td>312</td><td>16</td><td>135</td><td>77</td><td>Al-Mursalat</td><td>580</td><td>29</td><td>50</td></tr>
+        <tr><td>21</td><td>Al-Anbiya'</td><td>322</td><td>17</td><td>112</td><td>78</td><td>An-Naba'</td><td>582</td><td>30</td><td>40</td></tr>
+        <tr><td>22</td><td>Al-Hajj</td><td>332</td><td>17</td><td>78</td><td>79</td><td>An-Nazi'at</td><td>583</td><td>30</td><td>46</td></tr>
+        <tr><td>23</td><td>Al-Mu'minun</td><td>342</td><td>18</td><td>118</td><td>80</td><td>'Abasa</td><td>585</td><td>30</td><td>42</td></tr>
+        <tr><td>24</td><td>An-Nur</td><td>350</td><td>18</td><td>64</td><td>81</td><td>At-Takwir</td><td>586</td><td>30</td><td>29</td></tr>
+        <tr><td>25</td><td>Al-Furqan</td><td>360</td><td>18</td><td>77</td><td>82</td><td>Al-Infitar</td><td>587</td><td>30</td><td>19</td></tr>
+        <tr><td>26</td><td>Asy-Su'ara'</td><td>365</td><td>19</td><td>227</td><td>83</td><td>Al-Mutaffifin</td><td>587</td><td>30</td><td>36</td></tr>
+        <tr><td>27</td><td>An-Naml</td><td>380</td><td>19</td><td>93</td><td>84</td><td>Al-Insyiqaq</td><td>589</td><td>30</td><td>25</td></tr>
+        <tr><td>28</td><td>Al-Qasas</td><td>385</td><td>20</td><td>88</td><td>85</td><td>Al-Buruj</td><td>590</td><td>30</td><td>22</td></tr>
+        <tr><td>29</td><td>Al-Ankabut</td><td>396</td><td>20</td><td>69</td><td>86</td><td>At-Tariq</td><td>591</td><td>30</td><td>17</td></tr>
+        <tr><td>30</td><td>Ar-Rum</td><td>404</td><td>21</td><td>60</td><td>87</td><td>Al-A'la</td><td>591</td><td>30</td><td>19</td></tr>
+        <tr><td>31</td><td>Luqman</td><td>411</td><td>21</td><td>34</td><td>88</td><td>Al-Gasyiyah</td><td>592</td><td>30</td><td>26</td></tr>
+        <tr><td>32</td><td>As-Sajdah</td><td>415</td><td>21</td><td>30</td><td>89</td><td>Al-Fajr</td><td>593</td><td>30</td><td>30</td></tr>
+        <tr><td>33</td><td>Al-Ahzab</td><td>418</td><td>21</td><td>73</td><td>90</td><td>Al-Balad</td><td>594</td><td>30</td><td>20</td></tr>
+        <tr><td>34</td><td>Saba'</td><td>428</td><td>22</td><td>54</td><td>91</td><td>Asy-Syams</td><td>595</td><td>30</td><td>15</td></tr>
+        <tr><td>35</td><td>Fatir</td><td>434</td><td>22</td><td>45</td><td>92</td><td>Al-Lail</td><td>595</td><td>30</td><td>21</td></tr>
+        <tr><td>36</td><td>Yasin</td><td>440</td><td>22</td><td>83</td><td>93</td><td>Ad-Duha</td><td>596</td><td>30</td><td>11</td></tr>
+        <tr><td>37</td><td>As-Saffat</td><td>446</td><td>23</td><td>182</td><td>94</td><td>Asy-Syarh</td><td>596</td><td>30</td><td>8</td></tr>
+        <tr><td>38</td><td>Sad</td><td>453</td><td>23</td><td>88</td><td>95</td><td>At-Tin</td><td>597</td><td>30</td><td>8</td></tr>
+        <tr><td>39</td><td>Az-Zumar</td><td>458</td><td>23</td><td>75</td><td>96</td><td>Al-'Alaq</td><td>597</td><td>30</td><td>19</td></tr>
+        <tr><td>40</td><td>Ghafir</td><td>467</td><td>24</td><td>85</td><td>97</td><td>Al-Qadr</td><td>598</td><td>30</td><td>5</td></tr>
+        <tr><td>41</td><td>Fussilat</td><td>477</td><td>24</td><td>54</td><td>98</td><td>Al-Bayyinah</td><td>598</td><td>30</td><td>8</td></tr>
+        <tr><td>42</td><td>Asy-Syura</td><td>483</td><td>25</td><td>53</td><td>99</td><td>Az-Zalzalah</td><td>599</td><td>30</td><td>8</td></tr>
+        <tr><td>43</td><td>Az-Zukhruf</td><td>489</td><td>25</td><td>89</td><td>100</td><td>Al-'Adiyat</td><td>599</td><td>30</td><td>11</td></tr>
+        <tr><td>44</td><td>Ad-Dukhan</td><td>496</td><td>25</td><td>59</td><td>101</td><td>Al-Qari'ah</td><td>600</td><td>30</td><td>11</td></tr>
+        <tr><td>45</td><td>Al-Jasiyah</td><td>499</td><td>25</td><td>37</td><td>102</td><td>At-Takathur</td><td>600</td><td>30</td><td>8</td></tr>
+        <tr><td>46</td><td>Al-Ahqaf</td><td>502</td><td>26</td><td>35</td><td>103</td><td>Al-'Asr</td><td>601</td><td>30</td><td>3</td></tr>
+        <tr><td>47</td><td>Muhammad</td><td>508</td><td>26</td><td>38</td><td>104</td><td>Al-Humazah</td><td>601</td><td>30</td><td>9</td></tr>
+        <tr><td>48</td><td>Al-Fath</td><td>511</td><td>26</td><td>29</td><td>105</td><td>Al-Fil</td><td>601</td><td>30</td><td>5</td></tr>
+        <tr><td>49</td><td>Al-Hujurat</td><td>515</td><td>26</td><td>18</td><td>106</td><td>Quraisy</td><td>602</td><td>30</td><td>4</td></tr>
+        <tr><td>50</td><td>Qaf</td><td>518</td><td>26</td><td>45</td><td>107</td><td>Al-Ma'un</td><td>602</td><td>30</td><td>7</td></tr>
+        <tr><td>51</td><td>Az-Zariyat</td><td>520</td><td>26</td><td>60</td><td>108</td><td>Al-Kausar</td><td>602</td><td>30</td><td>3</td></tr>
+        <tr><td>52</td><td>At-Tur</td><td>523</td><td>27</td><td>49</td><td>109</td><td>Al-Kafirun</td><td>603</td><td>30</td><td>6</td></tr>
+        <tr><td>53</td><td>An-Najm</td><td>526</td><td>27</td><td>62</td><td>110</td><td>An-Nasr</td><td>603</td><td>30</td><td>3</td></tr>
+        <tr><td>54</td><td>Al-Qamar</td><td>528</td><td>27</td><td>55</td><td>111</td><td>Al-Lahab</td><td>603</td><td>30</td><td>5</td></tr>
+        <tr><td>55</td><td>Ar-Rahman</td><td>531</td><td>27</td><td>78</td><td>112</td><td>Al-Ikhlas</td><td>604</td><td>30</td><td>4</td></tr>
+        <tr><td>56</td><td>Al-Waqi'ah</td><td>534</td><td>27</td><td>96</td><td>113</td><td>Al-Falaq</td><td>604</td><td>30</td><td>5</td></tr>
+        <tr><td>57</td><td>Al-Hadid</td><td>541</td><td>27</td><td>29</td><td>114</td><td>An-Nas</td><td>604</td><td>30</td><td>6</td></tr>
+    </tbody>
+</table>
+
+<script>
+    let sortAscending = true;
+
+    function sortTable(n) {
+        const table = document.getElementById("surahTable");
+        let rows, switching, i, x, y, shouldSwitch, switchcount = 0;
+        switching = true;
+
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                
+                if (sortAscending) {
+                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else {
+                    if (Number(x.innerHTML) < Number(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount == 0 && sortAscending) {
+                    sortAscending = false;
+                    switching = true;
+                } else {
+                    sortAscending = !sortAscending;
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
